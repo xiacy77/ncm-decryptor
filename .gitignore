@@ -1,0 +1,25 @@
+node_modules/
+dist/
+.DS_Store
+*.local
+.vscode/
+.idea/
+
+# Release archives created for hand-off
+*.zip
+
+# Local tooling / visual-test leftovers
+.npm-cache/
+screenshots/
+.test-assets/
+.subpath-test/
+.chrome-profile*/
+
+# Generated from @mediapipe/hands on every `npm run dev` / `npm run build`.
+# It is intentionally not committed so the source repository stays light.
+public/mediapipe/
+
+# Local logs
+*.log
+npm-debug.log*
+pnpm-debug.log*

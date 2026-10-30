@@ -1,0 +1,25 @@
+{
+  "name": "starlight-anniversary",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A soft watercolor, gesture-controlled one-year anniversary keepsake built with Vite and Vue 3.",
+  "type": "module",
+  "scripts": {
+    "dev": "node scripts/sync-mediapipe.mjs && vite --host 0.0.0.0",
+    "build": "node scripts/sync-mediapipe.mjs && vite build",
+    "preview": "vite preview --host 0.0.0.0",
+    "sync:mediapipe": "node scripts/sync-mediapipe.mjs"
+  },
+  "dependencies": {
+    "@mediapipe/hands": "0.4.1675469240",
+    "d3-geo": "^3.1.1",
+    "vue": "^3.5.13"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^5.2.1",
+    "vite": "^5.4.11"
+  },
+  "engines": {
+    "node": ">=18.18"
+  }
+}

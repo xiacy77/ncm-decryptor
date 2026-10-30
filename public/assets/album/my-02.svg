@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="1200" viewBox="0 0 900 1200">
+  <!-- 👉 这是占位图：请在此处换成你自己的纪念照片（也可以直接在 src/config/story.js 中改路径）。 -->
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#d4d4dd"/>
+      <stop offset="1" stop-color="#e9dfe0"/>
+    </linearGradient>
+    <radialGradient id="light" cx="50%" cy="38%" r="65%">
+      <stop offset="0" stop-color="#fffaf0" stop-opacity=".68"/>
+      <stop offset="1" stop-color="#fffaf0" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="vignette" cx="50%" cy="45%" r="70%">
+      <stop offset="0" stop-color="#3d3035" stop-opacity="0"/>
+      <stop offset="1" stop-color="#3d3035" stop-opacity=".2"/>
+    </radialGradient>
+    <filter id="wc" x="-30%" y="-30%" width="160%" height="160%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.009 0.016" numOctaves="3" seed="23" result="noise"/>
+      <feDisplacementMap in="SourceGraphic" in2="noise" scale="26" xChannelSelector="R" yChannelSelector="G"/>
+      <feGaussianBlur stdDeviation="1.4"/>
+    </filter>
+    <filter id="soft" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="18"/>
+    </filter>
+    <filter id="blur6" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6"/>
+    </filter>
+    <filter id="grain">
+      <feTurbulence type="fractalNoise" baseFrequency=".8" numOctaves="3" stitchTiles="stitch"/>
+    </filter>
+  </defs>
+  <rect width="900" height="1200" fill="url(#bg)"/>
+  <rect width="900" height="1200" fill="url(#light)"/>
+  <g filter="url(#wc)">
+    
+  <circle cx="620" cy="300" r="118" fill="#f5e9d1" opacity=".82" filter="url(#blur6)"/>
+  <circle cx="662" cy="260" r="110" fill="#e7e2e7" opacity=".38" filter="url(#blur6)"/>
+  <path d="M-40 690 C 220 660 390 675 560 690 C 760 706 870 680 960 670 L 960 1000 L -40 1000Z" fill="#8d94a5" opacity=".34"/>
+  <path d="M-40 745 C 180 700 360 738 560 738 C 760 738 835 705 960 725 L 960 1000 L -40 1000Z" fill="#7a8194" opacity=".28"/>
+  <g stroke="#f7ecd6" stroke-width="2" opacity=".27" stroke-linecap="round">
+    <path d="M500 705 L 735 705"/><path d="M552 748 L 690 748"/><path d="M600 788 L 650 788"/>
+    <path d="M455 826 L 735 826"/><path d="M545 862 L 670 862"/><path d="M590 898 L 630 898"/>
+  </g>
+  <g fill="#f8efdd">
+    <circle cx="145" cy="205" r="2.4" opacity=".7"/><circle cx="250" cy="340" r="1.8" opacity=".5"/>
+    <circle cx="790" cy="180" r="2.2" opacity=".65"/><circle cx="728" cy="450" r="1.7" opacity=".55"/>
+    <circle cx="410" cy="200" r="1.5" opacity=".45"/><circle cx="830" cy="560" r="1.9" opacity=".4"/>
+  </g>
+  <g fill="none" stroke="#f7ead5" stroke-width="1.2" opacity=".2">
+    <circle cx="215" cy="295" r="4"/><circle cx="780" cy="352" r="3"/><circle cx="110" cy="440" r="2.6"/>
+  </g>
+  <g filter="url(#blur6)" opacity=".45">
+    <ellipse cx="620" cy="940" rx="340" ry="52" fill="#d9d2d8"/>
+  </g>
+  <path d="M120 1000 C 180 930 260 918 330 860" fill="none" stroke="#6f7b77" stroke-width="2.5" opacity=".28"/>
+  <path d="M270 900 C 322 886 354 892 382 916" fill="none" stroke="#7b8a83" stroke-width="2" opacity=".22"/>
+
+  </g>
+  <rect width="900" height="1200" fill="url(#vignette)"/>
+  <g font-family="'YouYuan','PingFang SC','Microsoft YaHei',sans-serif" fill="#4f4145">
+    <text x="70" y="1055" font-size="21" letter-spacing="5" opacity=".55">MY PHOTO · SUMMER</text>
+    <text x="70" y="1102" font-size="31" letter-spacing="4" opacity=".72">我的照片 · 第二页</text>
+    <text x="70" y="1140" font-size="15" letter-spacing="2" opacity=".34">02 · ME · 请替换为你的照片</text>
+    <path d="M70 1068h110" stroke="#4f4145" stroke-width="1" opacity=".18"/>
+  </g>
+  <rect width="900" height="1200" filter="url(#grain)" opacity=".07" style="mix-blend-mode:multiply"/>
+</svg>
